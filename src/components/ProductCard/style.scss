@@ -1,0 +1,120 @@
+.product-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #252831;
+  height: 600px;
+  width: 800px;
+  margin: 0 auto;
+  box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.4);
+  margin-top: 2%;
+
+  .card-background {
+    background-color: #2a2f40;
+  }
+
+  .left {
+    align-items: center;
+    background-color: #ff6d39;
+    border-radius: 0% 50% 50% 0%;
+    z-index: 5;
+
+    img {
+      margin-top: 30px;
+      width: 300px;
+    }
+  }
+
+  .right {
+    z-index: 3;
+
+    .product-name {
+      i {
+        color: #ffffff;
+        transition: 0.3s all ease;
+        margin: 0px 12px;
+
+        &:hover {
+          color: #ff6d39;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .product-info {
+      z-index: 10;
+
+      ul {
+        list-style-type: none;
+
+        li {
+          display: inline-block;
+          margin-right: 25px;
+          color: #ffffff;
+          font-family: "muli";
+          margin-top: 20px;
+          font-weight: 500;
+          font-size: 11px;
+        }
+      }
+
+      .bg {
+        width: 15px;
+        height: 15px;
+        text-align: center;
+        padding: 2px;
+        margin-right: 20px;
+        transition: 0.3s all ease;
+        border-radius: 50%;
+
+        &:hover {
+          background-color: #ff6d39;
+          border-radius: 50%;
+          width: 15px;
+          height: 15px;
+          cursor: pointer;
+        }
+      }
+
+      .yellow {
+        content: "";
+        width: 13px;
+        height: 13px;
+        background-color: #fec60f;
+        border-radius: 50%;
+        border: 2px solid rgba(0, 0, 0, 0);
+        transition: 0.3s all ease;
+      }
+
+      .black {
+        content: "";
+        width: 13px;
+        height: 13px;
+        background-color: #000000;
+        border-radius: 50%;
+        border: 2px solid rgba(0, 0, 0, 0);
+        transition: 0.3s all ease;
+      }
+
+      .blue {
+        content: "";
+        width: 13px;
+        height: 13px;
+        background-color: #02a2ca;
+        border-radius: 50%;
+        border: 2px solid rgba(0, 0, 0, 0);
+        transition: 0.3s all ease;
+      }
+
+      .yellow:hover,
+      .black:hover,
+      .blue:hover {
+        border: 2px solid #f76b39;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+}
