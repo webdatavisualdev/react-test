@@ -1,0 +1,30 @@
+@import "bootstrap/scss/bootstrap";
+@import url(~@fortawesome/fontawesome-free/css/all.css);
+@import url("https://fonts.googleapis.com/css?family=Muli");
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h2 {
+  color: #ffffff;
+  font-family: "muli";
+  font-weight: 800;
+  font-size: 29px;
+}
+
+h3 {
+  color: #ffffff;
+  font-family: "muli";
+  font-size: 20px;
+  font-weight: 500;
+}
+
+h4 {
+  display: inline-block;
+  color: #ffffff;
+  font-family: "muli";
+  font-weight: bold;
+  font-size: 15px;
+}
