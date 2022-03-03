@@ -11,6 +11,7 @@
 
   .card-background {
     background-color: #2a2f40;
+    width: 100%;
   }
 
   .left {
@@ -52,15 +53,12 @@
           margin-right: 25px;
           color: #ffffff;
           font-family: "muli";
-          margin-top: 20px;
           font-weight: 500;
           font-size: 11px;
         }
       }
 
       .bg {
-        width: 15px;
-        height: 15px;
         text-align: center;
         padding: 2px;
         margin-right: 20px;
@@ -69,18 +67,16 @@
 
         &:hover {
           background-color: #ff6d39;
-          border-radius: 50%;
-          width: 15px;
-          height: 15px;
+          border-radius: 2px;
           cursor: pointer;
         }
       }
 
-      .yellow {
+      .red {
         content: "";
         width: 13px;
         height: 13px;
-        background-color: #fec60f;
+        background-color: #fe1f0f;
         border-radius: 50%;
         border: 2px solid rgba(0, 0, 0, 0);
         transition: 0.3s all ease;
@@ -100,7 +96,7 @@
         content: "";
         width: 13px;
         height: 13px;
-        background-color: #02a2ca;
+        background-color: #12eb62;
         border-radius: 50%;
         border: 2px solid rgba(0, 0, 0, 0);
         transition: 0.3s all ease;
