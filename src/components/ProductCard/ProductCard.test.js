@@ -1,7 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import ProductCard from "./index";
+import nock from "nock";
 
-test("renders learn react link", () => {
+import axiosMock from "axios";
+jest.mock("axios");
+
+test("renders learn react link", async () => {
   const stubProduct = {
     status: "active",
     title: "IPod Nano - 8GB",
@@ -9,13 +13,18 @@ test("renders learn react link", () => {
     vendor: "Apple",
     id: 1,
   };
-  const { getByText, container } = render(
-    <ProductCard product={stubProduct} />
-  );
 
-  expect(getByText(stubProduct.title)).toBeInTheDocument();
-  expect(getByText(stubProduct.vendor)).toBeInTheDocument();
-  expect(getByText("Emotive")).toBeInTheDocument();
-  expect(getByText("Flash Memory, MP3")).toBeInTheDocument();
-  expect(getByText("Music")).toBeInTheDocument();
+  const data = {
+    data: { product: stubProduct },
+  };
+  axiosMock.get.mockResolvedValueOnce(data);
+
+  const { getByText } = render(<ProductCard prodcutId={1} />);
+  await (() => {
+    expect(getByText(stubProduct.title)).toBeInTheDocument();
+    expect(getByText(stubProduct.vendor)).toBeInTheDocument();
+    expect(getByText("Emotive")).toBeInTheDocument();
+    expect(getByText("Flash Memory, MP3")).toBeInTheDocument();
+    expect(getByText("Music")).toBeInTheDocument();
+  });
 });

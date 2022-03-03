@@ -6,15 +6,15 @@ import "./style.scss";
 
 const ProductCard = ({ prodcutId }) => {
   const [isEdit, setEdit] = useState(false);
+  const [product, setProduct] = useState({});
 
   const toggle = () => {
     setEdit(!isEdit);
   };
 
-  const [product, setProduct] = useState({});
-
   const getProduct = async (id) => {
     const result = await axios.get(`/api/products/${id}`);
+
     if (result.status === 200) {
       setProduct(result.data.product);
     }

@@ -50,7 +50,6 @@ const EditModal = ({ product, isOpen, toggle }) => {
   };
 
   const updateEdit = async () => {
-    console.log(productInfo);
     setErrors(validate(productInfo));
     if (_.isEmpty(validate(productInfo))) {
       await axios.patch(`/api/products/${product.id}`, productInfo);
