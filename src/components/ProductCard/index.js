@@ -34,7 +34,7 @@ const ProductCard = ({ prodcutId }) => {
           <div className="col-6 right">
             <div className="product-info">
               <div className="product-name text-end mt-3">
-                <i className="far fa-edit" onClick={() => setEdit(true)}></i>
+                <span onClick={() => setEdit(true)}>Edit</span>
               </div>
               <div className="details">
                 <h3 className="mt-2">{product?.vendor}</h3>

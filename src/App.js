@@ -1,5 +1,3 @@
-import react from "react";
-
 import ProductCard from "./components/ProductCard";
 
 // Use this ID to fetch the correct product from the API
